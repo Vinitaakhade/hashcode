@@ -1,0 +1,91 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SubscriptionForm.aspx.cs" Inherits="WebApplication1.SubscriptionForm" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+ <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #3e39af;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #808080;
+  padding: 20px;
+}
+</style>
+</head>
+<body style="background-image:url(Images/back3.jpg);">
+   
+   
+   
+    <div style="padding-left:500px; padding-top:30px">
+<div class="container" style="width:50%; height:50%; align-items:center">
+        <center> <h3><b style="font-family:'Times New Roman', Times, serif; font-size:35px">Subscription Form</b></h3></center> 
+  <form id="form1" runat="server">
+    <div>
+     <label for="subject">Email</label>
+     <asp:TextBox ID="email" runat="server"></asp:TextBox>
+
+    <label for="fname">First Name</label>
+    <asp:TextBox ID="fname" runat="server"></asp:TextBox>
+        
+    <label for="lname">Last Name</label>
+    <asp:TextBox ID="lname" runat="server"></asp:TextBox>
+  
+    <label for="country">Country</label>
+    <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:ListItem>Select Item</asp:ListItem>
+        <asp:ListItem>Gujarat</asp:ListItem>
+        <asp:ListItem>Kerala</asp:ListItem>
+        <asp:ListItem>Maharashtra</asp:ListItem>
+        <asp:ListItem>Goa</asp:ListItem>
+        <asp:ListItem>Punjab</asp:ListItem>
+        <asp:ListItem>Delhi</asp:ListItem>
+        </asp:DropDownList>
+
+   <label for="Sbemailfreq">Subscription Email Frequency</label>
+        <asp:DropDownList ID="DropDownList2" runat="server">
+            <asp:ListItem>Daily</asp:ListItem>
+            <asp:ListItem>Weekly</asp:ListItem>
+            <asp:ListItem>Monthly</asp:ListItem>
+        </asp:DropDownList>
+    
+  
+   <center>
+        <asp:Button ID="Button1" runat="server" Text="Submit" value="submit" BorderStyle="Groove" BorderColor="#ffffff" Font-Bold="true" OnClick="Button1_Click"/>      
+       </center>
+        </div>
+      <asp:Label ID="lbl" runat="server" Text="Label" Visible="false"></asp:Label>
+       <asp:Label ID="lbl2" runat="server" Text="Label" Visible="false"></asp:Label>
+    
+  </form>
+</div>
+   </div>
+</body>
+</html>
